@@ -12,26 +12,71 @@
     
     <img src="background.jpeg" class="bg">
 
-    <div class="topWrap">
-        <h1 class="title"><u>THE BLOCKCHAIN MAIDEN</u></h1>
-        <h2 class="mintedText" id="mintedText">8887/8887 Minted</h2>
+    <div class="connect" id="connect" onclick="ConnectWallet()"> 
+        <h1 class="connectText">CONNECT</h1>
     </div>
 
-    <div class="mintButton" onclick="Mint()">MINT</div>
-
-    <img class="maidenImage1" src="./1.png">
-    <img class="maidenImage2" src="./2.png">
-    <img class="maidenImage3" src="./3.png">
-    <img class="maidenImage4" src="./4.png">
-    <img class="maidenImage5" src="./5.png">
-    <img class="maidenImage6" src="./6v2.png">
-    <img class="maidenImage7" src="./7.png">
-    <img class="maidenImage8" src="./8.png">
-    <img class="maidenImage9" src="./9.png">
-    <img class="maidenImage10" src="./10.png">
-    <img class="maidenImage11" src="./11.png">
+    <div class="main" id="main">
+        <div class="topWrap">
+            <h1 class="title"><u>THE BLOCKCHAIN MAIDEN</u></h1>
+            <h2 class="mintedText" id="mintedText">8887/8887 Minted</h2>
+        </div>
+    
+        <div class="mintButton" onclick="Mint()">MINT</div>
+    
+        <img class="maidenImage1" src="./1.png">
+        <img class="maidenImage2" src="./2.png">
+        <img class="maidenImage3" src="./3.png">
+        <img class="maidenImage4" src="./4.png">
+        <img class="maidenImage5" src="./5.png">
+        <img class="maidenImage6" src="./6v2.png">
+        <img class="maidenImage7" src="./7.png">
+        <img class="maidenImage8" src="./8.png">
+        <img class="maidenImage9" src="./9.png">
+        <img class="maidenImage10" src="./10.png">
+        <img class="maidenImage11" src="./11.png">
+    </div>
+    
 
     <style>
+        .main{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            visibility: hidden;
+        }
+
+        .connect{
+            position: absolute;
+            width: 320px;
+            height: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            top: 50%;
+            left: 50%;
+            margin-top: -30px;
+            margin-left: -160px;
+            cursor: pointer;
+
+            background-color: rgba(0, 0, 0, 0);
+
+            border: 1px solid deeppink;
+        }
+
+
+.connectText{
+            font-family: Libre Baskerville;
+            font-size: 2em;
+            font-weight: 200;
+            color: deeppink;
+
+            text-align: center;
+        }
+
         .bg{
             height: 100.5%;
             width: 100%;
@@ -273,8 +318,8 @@
     <script type="text/javascript">
     var account;
 
-    const address = "";
-    const ABI = [];
+    const address = "0x9892cA9876632f02c5D61d476b2D007F9B65f7Bc";
+    const ABI = [{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[],"name":"ApprovalCallerNotOwnerNorApproved","type":"error"},{"inputs":[],"name":"ApprovalQueryForNonexistentToken","type":"error"},{"inputs":[],"name":"ApprovalToCurrentOwner","type":"error"},{"inputs":[],"name":"ApproveToCaller","type":"error"},{"inputs":[],"name":"BalanceQueryForZeroAddress","type":"error"},{"inputs":[],"name":"MintToZeroAddress","type":"error"},{"inputs":[],"name":"MintZeroQuantity","type":"error"},{"inputs":[],"name":"OwnerQueryForNonexistentToken","type":"error"},{"inputs":[],"name":"TransferCallerNotOwnerNorApproved","type":"error"},{"inputs":[],"name":"TransferFromIncorrectOwner","type":"error"},{"inputs":[],"name":"TransferToNonERC721ReceiverImplementer","type":"error"},{"inputs":[],"name":"TransferToZeroAddress","type":"error"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"approved","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"operator","type":"address"},{"indexed":false,"internalType":"bool","name":"approved","type":"bool"}],"name":"ApprovalForAll","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Transfer","type":"event"},{"inputs":[{"internalType":"uint256","name":"increaseSupply","type":"uint256"}],"name":"AddSupply","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"pubMaxMints","type":"uint256"},{"internalType":"uint256","name":"wlMaxMints","type":"uint256"},{"internalType":"uint256","name":"vipMaxMints","type":"uint256"}],"name":"ChangeMaxMints","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"pubMintPrice","type":"uint256"},{"internalType":"uint256","name":"wlMintPrice","type":"uint256"},{"internalType":"uint256","name":"vipMintPrice","type":"uint256"}],"name":"ChangePricing","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"MAX_SUPPLY","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bool","name":"shouldOpen","type":"bool"}],"name":"OpenPublicSale","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bool","name":"shouldOpen","type":"bool"}],"name":"OpenVIPSale","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bool","name":"shouldOpen","type":"bool"}],"name":"OpenWhitelistSale","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"PublicMint","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"bool","name":"shouldReveal","type":"bool"}],"name":"Reveal","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes32","name":"wlRoot","type":"bytes32"},{"internalType":"bytes32","name":"vipRoot","type":"bytes32"}],"name":"SetRoots","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"bytes32[]","name":"proof","type":"bytes32[]"}],"name":"VIPMint","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"bytes32[]","name":"proof","type":"bytes32[]"}],"name":"WhiteListMint","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"approve","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"baseURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"getApproved","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"operator","type":"address"}],"name":"isApprovedForAll","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"isPublicSale","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"isRevealed","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"isVIPSale","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"isWLSale","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"maxMints","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"merkleRoots","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"mintPrices","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"ownerOf","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"bytes","name":"_data","type":"bytes"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"operator","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setApprovalForAll","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"newURI","type":"string"}],"name":"setBaseURI","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes4","name":"interfaceId","type":"bytes4"}],"name":"supportsInterface","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"tokenURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"transferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"unrevealedBaseURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"withdraw","outputs":[],"stateMutability":"nonpayable","type":"function"}];
     var contract = null;
 
     var totalMinted;
@@ -310,7 +355,7 @@
             contract = new web3.eth.Contract(ABI, address);
 
             document.getElementById("connect").style.visibility = 'hidden';
-            document.getElementById("mainSection").style.visibility = 'visible';
+            document.getElementById("main").style.visibility = 'visible';
 
             let x = await loadData();
             changeMintedText();
@@ -320,7 +365,7 @@
         const loadData = async () =>{
             isPub = await contract.methods.isPublicSale().call({from: account});   
             pubPrice = await contract.methods.mintPrices(0).call({from: account});
-            isWL = await contract.methods.isWhiteListSale().call({from: account});
+            isWL = await contract.methods.isWLSale().call({from: account});
             wlPrice = await contract.methods.mintPrices(1).call({from: account});
             isVIP = await contract.methods.isVIPSale().call({from: account});
             vipPrice = await contract.methods.mintPrices(2).call({from: account});
