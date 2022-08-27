@@ -370,6 +370,7 @@
             isVIP = await contract.methods.isVIPSale().call({from: account});
             vipPrice = await contract.methods.mintPrices(2).call({from: account});
 
+		totalSupply = await contract.methods.MAX_SUPPLY().call({from: account});
             totalMinted = await contract.methods.totalSupply().call({from: account});
         }
 
