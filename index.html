@@ -16,6 +16,14 @@
         <h1 class="connectText">CONNECT</h1>
     </div>
 
+    <div class="tabiconWrapper">
+        <img class="icon" src="icon1.jpeg">
+        <img class="icon" src="icon2.jpg">
+        <img class="icon" src="icon3.jpeg">
+        <img class="icon" src="icon4.jpeg">
+        <img class="icon5" src="icon5.png">
+    </div>
+
     <div class="main" id="main">
         <div class="topWrap">
             <h1 class="title"><u>THE BLOCKCHAIN MAIDEN</u></h1>
@@ -23,6 +31,7 @@
         </div>
     
         <div class="mintButton" onclick="Mint()">MINT</div>
+        <p class="mintNotice">Mint with a burner wallet you silly simp</p>
     
         <img class="maidenImage1" src="./1.png">
         <img class="maidenImage2" src="./2.png">
@@ -123,6 +132,45 @@
             margin-bottom: 10px;
         }
 
+        .tabiconWrapper{
+            position: absolute;
+            width: 99.5%;
+            height: 10%;
+
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+
+        .icon{
+            position: relative;
+
+            width: 35px;
+            height: 35px;
+
+            border-radius: 25px;
+            border: 1px solid white;
+
+            margin-right: 10px;
+            margin-left: 10px;
+
+            cursor: pointer;
+        }
+
+        .icon5{
+            position: relative;
+
+            width: 125px;
+            height: 125px;
+
+            margin-top: 25px;
+
+            margin-right: 10px;
+            margin-left: -30px;
+
+            cursor: pointer;
+        }
+
         .mintedText{
             position: relative;
             
@@ -161,6 +209,24 @@
             align-items: center;
 
             cursor: pointer;
+        }
+
+        .mintNotice{
+            position: absolute;
+
+            top: 60%;
+            left: 50%;
+            margin-top: -25px;
+            margin-left: -75px;
+
+            width: 150px;
+            height: 50px;
+
+            color: deeppink;
+            font-family: Libre Baskerville;
+            font-size: 0.75em;
+            font-weight: 300;
+            text-align: center;
         }
 
         .maidenImage1{
@@ -293,6 +359,32 @@
 
             width: 190px;
             height: 275px;
+        }
+
+        @media screen and (max-width: 1200px){
+            .maidenImage4{
+                visibility: hidden;
+            }
+
+            .maidenImage5{
+                visibility: hidden;
+            }
+
+            .maidenImage6{
+                visibility: hidden;
+            }
+
+            .maidenImage7{
+                visibility: hidden;
+            }
+
+            .maidenImage10{
+                visibility: hidden;
+            }
+
+            .maidenImage11{
+                visibility: hidden;
+            }
         }
     </style>
 </head>
